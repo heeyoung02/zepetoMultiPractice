@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 12e7b5795dcddf64e98f22a6d745ff93
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    ZEPETO_World_1 = require(\\\"ZEPETO.World\\\");\\r\\n// \uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\u033A\uFFFD\u01AE\uFFFD\uFFFD \uFFFD\uFFFD/\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u03F4\uFFFD
+    \uFFFD\uFFFD\u0169\uFFFD\uFFFD\u01AE\\r\\nclass MultiplaySample extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n        this.leaveBtn.onClick.AddListener(() => {\\r\\n           
+    console.log(this.room.Id);\\r\\n            this.room.Leave(); // \uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\r\\n        });\\r\\n       
+    this.multiPlay = this.gameObject.GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\\r\\n       
+    // \uFFFD\uFFFD\uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u01F0\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04B6\uFFFD \u0223\uFFFD\uFFFD. \uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD\uFFFD\u06B7\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\\r\\n        this.multiPlay.add_RoomCreated((room)
+    => {\\r\\n            console.log(`[Room Created]`);\\r\\n            console.log(room);\\r\\n       
+    });\\r\\n        // \uFFFD\uBFE1 \uFFFD\uFFFD\uFFFD\u04F5\u01F8\uFFFD \u0223\uFFFD\uFFFD.
+    \uFFFD\uFFFD\uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\u06B7\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\\r\\n       
+    this.multiPlay.add_RoomJoined((room) => {\\r\\n            console.log(`[Room
+    Joined]`);\\r\\n            console.log(room);\\r\\n            this.room = room;\\r\\n       
+    });\\r\\n        // \uFFFD\uBFE1 \uFFFD\uFFFD\uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD \u0223\uFFFD\uFFFD. RoomLeaveEvent(\uFFFD\uFFFD\uFFFD\uFFFD \uFFFD\u06B5\uFFFD
+    \uFFFD\uFFFD\uFFFD\uFFFD)\uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\u06B7\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\\r\\n       
+    // \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0377\uFFFD \uFFFD\u04B6\uFFFD \uFFFD\u06B5\uFFFD
+    \uFFFD\u0238\uFFFD\uFFFD\uFFFD.\\r\\n        this.multiPlay.add_RoomLeave((event)
+    => {\\r\\n            console.log(`[Room Leave]`);\\r\\n            console.log(event.Code);\\r\\n           
+    console.log(event.Message);\\r\\n        });\\r\\n        // \uFFFD\uBFE1 \uFFFD\u7FEC\uFFFD\uFFFD\u01FE\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD
+    \u0223\uFFFD\uFFFD\\r\\n        this.multiPlay.add_RoomReconnected((room) =>
+    {\\r\\n            console.log(`[Room Reconnected]`);\\r\\n            console.log(room);\\r\\n       
+    }\\r\\n        // \uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD \u0223\uFFFD\uFFFD\\r\\n       
+    );\\r\\n        // \uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD \u0223\uFFFD\uFFFD\\r\\n       
+    this.multiPlay.add_RoomError((event) => {\\r\\n            console.log(`[Room
+    Error]`);\\r\\n            console.log(event.Code);\\r\\n            console.log(event.Message);\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = MultiplaySample;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTXVsdGlwbGF5U2FtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTXVsdGlwbGF5U2FtcGxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBR0EsaURBQXFEO0FBQ3JELCtDQUFtRDtBQUVuRCxnQ0FBZ0M7QUFDaEMsTUFBcUIsZUFBZ0IsU0FBUSxxQ0FBcUI7SUFPOUQsS0FBSztRQUNELElBQUksQ0FBQyxRQUFRLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDbkMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO1lBQzFCLElBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQyxnQkFBZ0I7UUFDdkMsQ0FBQyxDQUFDLENBQUM7UUFFSCxJQUFJLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLG1DQUFvQixFQUFHLENBQUM7UUFFdEUsaURBQWlEO1FBQ2pELElBQUksQ0FBQyxTQUFTLGlCQUFnQixDQUFDLElBQW1CLEVBQUUsRUFBRTtZQUNsRCxPQUFPLENBQUMsR0FBRyxDQUFDLGdCQUFnQixDQUFDLENBQUM7WUFDOUIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN0QixDQUFDLEVBQUM7UUFFRixpQ0FBaUM7UUFDakMsSUFBSSxDQUFDLFNBQVMsZ0JBQWUsQ0FBQyxJQUFtQixFQUFFLEVBQUU7WUFDakQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxlQUFlLENBQUMsQ0FBQztZQUM3QixPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBRWxCLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ3JCLENBQUMsRUFBQztRQUVGLG9FQUFvRTtRQUNwRSx5QkFBeUI7UUFDekIsSUFBSSxDQUFDLFNBQVMsZUFBYyxDQUFDLEtBQXFCLEVBQUUsRUFBRTtZQUNsRCxPQUFPLENBQUMsR0FBRyxDQUFDLGNBQWMsQ0FBQyxDQUFDO1lBQzVCLE9BQU8sQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ3hCLE9BQU8sQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1FBQy9CLENBQUMsRUFBQztRQUVGLG9CQUFvQjtRQUNwQixJQUFJLENBQUMsU0FBUyxxQkFBb0IsQ0FBQyxJQUFtQixFQUFFLEVBQUU7WUFDdEQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDO1lBQ2xDLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDdEIsQ0FBQztRQUVELGdCQUFnQjtVQUZmO1FBRUQsZ0JBQWdCO1FBQ2hCLElBQUksQ0FBQyxTQUFTLGVBQWMsQ0FBQyxLQUFxQixFQUFFLEVBQUU7WUFDbEQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxjQUFjLENBQUMsQ0FBQztZQUM1QixPQUFPLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUN4QixPQUFPLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUMvQixDQUFDLEVBQUE7SUFDTCxDQUFDO0NBRUo7QUFuREQsa0NBbURDIn0=\",\"assetPath\":\"Assets/Scripts/MultiplaySample.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"leaveBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"MultiplaySample\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 9f8c3af5990a369f3fe4fc688e566991
+  onlyWriteTrigger: 0
